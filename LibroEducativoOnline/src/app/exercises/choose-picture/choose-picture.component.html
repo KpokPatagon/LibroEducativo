@@ -15,15 +15,12 @@
     <div class="ms-3" [innerHtml]="statement"></div>
 </div>
 <div class="mt-3 d-flex flex-wrap">
-    <div class="card me-5 mb-5" style="width:16rem;" *ngFor="let consigna of consignas; index as i">
-        <img [src]="consigna.pictureFile" class="card-img-top">
-        <div class="card-body">
-            <p class="card-text">
-                <span class="selectable-word" *ngFor="let word of consigna.words; index as j"
-                      [ngClass]="highlight(i, j)" (click)="wordSelected(i, j)">
-                    {{word}}
-                </span>
-            </p>
-        </div>
+    <div *ngFor="let consigna of consignas; index as i" class="ms-3 text-end" >
+        <span class="selectable-picture" (click)="pictureSelected(i)">
+            <img [src]="consigna.pictureFile" style="width:128px;height:128px;" />
+        </span>
+        <div class="h3" *ngIf="isValid(i)">&#10004;</div>
+        <div class="h3 text-danger" *ngIf="isInvalid(i)">&#10008;</div>
     </div>
 </div>
+

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChooseComponent } from './exercises/choose/choose.component';
+import { ChoosePictureComponent } from './exercises/choose-picture/choose-picture.component';
 import { ChooseWordComponent } from './exercises/choose-word/choose-word.component';
 import { WriteWordComponent } from './exercises/write-word/write-word.component';
 import { MatchPicComponent } from './exercises/match-pic/match-pic.component';
@@ -17,7 +17,7 @@ import { ChooseSyllableComponent } from './exercises/choose-syllable/choose-syll
 @NgModule({
   declarations: [
     AppComponent,
-    ChooseComponent,
+    ChoosePictureComponent,
     ChooseWordComponent,
     WriteWordComponent,
     MatchPicComponent,
