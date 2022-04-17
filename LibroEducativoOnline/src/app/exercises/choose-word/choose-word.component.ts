@@ -22,7 +22,7 @@ export class ChooseWordComponent implements OnInit {
     ngOnInit(): void {
         this.statement = this.sanitizer.bypassSecurityTrustHtml(`
             <p>Escuchamos.</p>
-            <p>Miro. Busco la palabra <strong>MAMÁ</strong> y la toco.
+            <p>Miro. Busco la palabra <strong>MAMÁ</strong> y la toco.</p>
         `);
 
         this.consignas = [
