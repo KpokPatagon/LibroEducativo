@@ -23,7 +23,7 @@ export class MatchPictureComponent implements OnInit {
     ngOnInit(): void {
         this.statement = this.sanitizer.bypassSecurityTrustHtml(`
             <p>Leo.</p>
-            <p>Junto la palabra con el dibujo que va.
+            <p>Junto la palabra con el dibujo que va.</p>
         `);
     }
 

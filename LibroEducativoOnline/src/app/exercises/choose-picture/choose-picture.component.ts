@@ -22,7 +22,7 @@ export class ChoosePictureComponent implements OnInit {
     ngOnInit(): void {
         this.statement = this.sanitizer.bypassSecurityTrustHtml(`
             <p>Decimos los nombres de las cosas.</p>
-            <p>Toco las que llevan <strong>Ma</strong>.
+            <p>Toco las que llevan <strong>Ma</strong></p>.
         `);
 
         this.consignas = [
