@@ -16,7 +16,7 @@
     </div>
  </nav>
 <div class="container">
-    <div class="my-5">
+    <div class="my-5 py-5">
         <div class="alert alert-primary" role="alert">
             <h4 class="alert-heading">Escuchamos, miramos, decimos.</h4>
         </div>
@@ -25,24 +25,8 @@
         <app-choose-word></app-choose-word>
         <app-match-picture></app-match-picture>
         <app-write-word></app-write-word>
-    </div>
-    <div class="my-5">//TODO: implement.</div>
-    <div class="my-5">
-        <app-choose-syllable></app-choose-syllable>
-    </div>
-    <div class="my-5">
-        <app-hidden-words></app-hidden-words>
-    </div>
-    <div class="my-5">
-        <app-match-group></app-match-group>
-    </div>
-    <div class="my-5">
-        <app-match-words></app-match-words>
-    </div>
-    <div class="my-5">
-        <app-sentence-completion></app-sentence-completion>
-    </div>
-    <div class="my-5">
-        <app-write-option></app-write-option>
+        <app-hidden-words [model]="hiddenWords0"></app-hidden-words>
+        <app-hidden-words [model]="hiddenWords1"></app-hidden-words>
+        <app-choose-sentence [model]="chooseSentence0"></app-choose-sentence>
     </div>
 </div>

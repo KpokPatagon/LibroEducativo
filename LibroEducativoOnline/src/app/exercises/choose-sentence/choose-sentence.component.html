@@ -16,21 +16,26 @@
 </div>
 <div class="mt-3">
     <form novalidate autocomplete="off" [formGroup]="form">
-        <div class="d-flex flex-wrap align-items-center my-3">
-            <div style="width: 300px;" class="me-3 mb-3" *ngFor="let consigna of model.consignas; index as i">
-                <div class="form-group row">
-                    <label [for]="'fc' + i" class="col-sm-4 col-form-label">{{consigna.word}}</label>
-                    <div class="col-sm-8">
-                        <input [id]="'fc' + i" type="text" class="form-control"
-                                [name]="'fc' + i"
-                                [formControlName]="'fc' + i"
-                                [ngClass]="{
-                                    'is-invalid': form.controls['fc' + i].dirty && form.controls['fc' + i].invalid,
-                                    'is-valid': form.controls['fc' + i].dirty && form.controls['fc' + i].valid
+        <div class="row align-items-center my-3">
+            <div class="col-6">
+                <div class="form-group"
+                     *ngFor="let sentence of model.consigna.sentences; index as i">
+                    <div class="form-check">
+                        <input [id]="'fc' + i" type="checkbox" class="form-check-input"
+                               [name]="'fc' + i"
+                               [formControlName]="'fc' + i"
+                               [ngClass]="{
+                                   'is-invalid': form.controls['fc' + i].dirty && form.controls['fc' + i].invalid,
+                                   'is-valid': form.controls['fc' + i].dirty && form.controls['fc' + i].valid
                                 }" />
+                        <label class="form-check-label" for="flexCheckDefault">
+                            {{sentence.sentence}}
+                        </label>
                     </div>
+
                 </div>
             </div>
+            <div class="col-6 text-center"><img [src]="model.consigna.pictureFile" /></div>
         </div>
     </form>
 </div>
