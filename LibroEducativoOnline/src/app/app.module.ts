@@ -11,14 +11,8 @@ import { ChoosePictureComponent } from './exercises/choose-picture/choose-pictur
 import { ChooseWordComponent } from './exercises/choose-word/choose-word.component';
 import { MatchPictureComponent } from './exercises/match-picture/match-picture.component';
 import { WriteWordComponent } from './exercises/write-word/write-word.component';
-
-
 import { HiddenWordsComponent } from './exercises/hidden-words/hidden-words.component';
-import { MatchGroupComponent } from './exercises/match-group/match-group.component';
-import { MatchWordsComponent } from './exercises/match-words/match-words.component';
-import { SentenceCompletionComponent } from './exercises/sentence-completion/sentence-completion.component';
-import { WriteOptionComponent } from './exercises/write-option/write-option.component';
-import { ChooseSyllableComponent } from './exercises/choose-syllable/choose-syllable.component';
+import { ChooseSentenceComponent } from './exercises/choose-sentence/choose-sentence.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +21,8 @@ import { ChooseSyllableComponent } from './exercises/choose-syllable/choose-syll
     ChooseWordComponent,
     MatchPictureComponent,
     WriteWordComponent,
-
     HiddenWordsComponent,
-    MatchGroupComponent,
-    MatchWordsComponent,
-    SentenceCompletionComponent,
-    WriteOptionComponent,
-    ChooseSyllableComponent,
+    ChooseSentenceComponent,
   ],
   imports: [
     BrowserModule,

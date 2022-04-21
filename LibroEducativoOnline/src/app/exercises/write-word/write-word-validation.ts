@@ -5,7 +5,6 @@ import { WriteWordModel } from "./write-word";
 export function writtenResponseMatchAnswer(consigna: WriteWordModel): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
         const valid = consigna.answer?.toLowerCase() === control.value?.toLowerCase();
-        console.log('consigna.answer', consigna.answer);
         return valid ? null : { wrongAnswer: { value: control.value } };
     };
 }
